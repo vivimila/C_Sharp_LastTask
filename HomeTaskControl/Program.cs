@@ -8,16 +8,18 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
-string[] currentArray = { "hello", "2", "world", "-2", "computer science" };
+string[] currentArray = { "hello", "25", "-2", "Hi", "computer science" };
 void changedArray(string[] array)
 {
-    string[] newArray = new string[array.Length];
-    for (int i = 0; i < array.Length; i++)
+    string[] newArray = new string[currentArray.Length];
+    int count = 0;
+    for (int i = 0; i < currentArray.Length; i++)
     {
-        if (array[i].Length <= 3)
+        if (currentArray[i].Length <= 3)
         {
-            newArray[i] = array[i]; ;
+            newArray[i] = array[i];
             Console.Write(newArray[i]);
+            count++;
         }
     }
     Console.WriteLine();
