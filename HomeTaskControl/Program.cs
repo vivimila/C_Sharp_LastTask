@@ -9,7 +9,7 @@
 // [“Russia”, “Denmark”, “Kazan”] → []
 
 string[] currentArray = { "hello", "25", "-2", "Hi", "computer science" };
-void changedArray(string[] array)
+void changedArray(string[] currentArray)
 {
     string[] newArray = new string[currentArray.Length];
     int count = 0;
@@ -17,7 +17,7 @@ void changedArray(string[] array)
     {
         if (currentArray[i].Length <= 3)
         {
-            newArray[i] = array[i];
+            newArray[i] = currentArray[i];
             Console.Write(newArray[i]);
             count++;
         }
