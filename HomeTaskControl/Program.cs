@@ -7,3 +7,30 @@
 // [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
+
+string[] currentArray = { "hello", "2", "world", "-2", "computer science" };
+void changedArray(string[] array)
+{
+    string[] newArray = new string[array.Length];
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            newArray[i] = array[i]; ;
+            Console.Write(newArray[i]);
+        }
+    }
+    Console.WriteLine();
+}
+
+void Print(string[] Array)
+{
+    for (int i = 0; i < Array.Length; i++)
+    {
+        Console.Write(Array[i]);
+    }
+    Console.WriteLine();
+}
+
+changedArray(currentArray);
+Print(currentArray);
