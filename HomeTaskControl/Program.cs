@@ -8,29 +8,32 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
-string[] currentArray = { "hello", "25", "-2", "Hi", "computer science" };
+string[] currentArray = { "hello", "25", "-2", "Hi", "computer science", ":-)" };
 void changedArray(string[] currentArray)
 {
     string[] newArray = new string[currentArray.Length];
     int count = 0;
+    Console.Write("Новый массив: [");
     for (int i = 0; i < currentArray.Length; i++)
     {
         if (currentArray[i].Length <= 3)
-        {
             newArray[i] = currentArray[i];
-            Console.Write(newArray[i]);
-            count++;
-        }
+        Console.Write($"{newArray[i]} ");
+        count++;
     }
+    Console.Write($"]");
     Console.WriteLine();
 }
 
+
 void Print(string[] Array)
 {
-    for (int i = 0; i < Array.Length; i++)
+    Console.Write("Исходный массив: [ ");
+    for (int i = 0; i < Array.Length - 1; i++)
     {
-        Console.Write(Array[i]);
+        Console.Write($"{Array[i]}, ");
     }
+    Console.Write($"{Array[Array.Length - 1]}] ");
     Console.WriteLine();
 }
 
